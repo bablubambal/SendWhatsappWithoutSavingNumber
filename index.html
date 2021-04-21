@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Send Whatapp Message ---without saving number</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+<!-- <div style="font-size: 40px;">
+    <h1 style="text-align:center; font-size:20px;"> Send WhatsApp Message</h1>
+        <p style="text-align:center">To any one without saving  number</p>
+        <p style="text-align:center">Steps:
+        <ul style="text-align:center">
+            <li>1.Enter the phone number with "91" starting</li>
+            <li>2.Enter the message you want to send</li>
+            <li>3.Click on send message respective app opens and then send</li>
+        </ul> -->
+        </p>
+</div>
+    <section class="text-gray-700 body-font">
+        
+
+        
+      <div class="container px-8 pt-48 pb-24 mx-auto lg:px-4">
+        <div
+          class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0"
+        >
+          <div class="relative">
+            <div align="center" class="p-8" >
+                <img height="150px" width="150px" src="whats.png"/>
+                <h1> Send Messsage without saving number</h1>
+                <p> Enter phone with "91" <br>
+                    Enter Message and Send
+                </p>
+    
+            </div>
+            <input
+              type="phone"
+              id="phone"
+              maxlength="12"
+              minlength="10"
+              name="email"
+              required
+              placeholder="Enter the phone number"
+              class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            />
+          </div>
+          <div class="relative">
+            <input
+              type="text"
+              id="message"
+              name="email"
+              required
+              placeholder="Your message...."
+              class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            />
+          </div>
+          
+          <button
+            class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2" onclick="sendWhatsapp()"
+          >
+            Send Message
+          </button>
+          <p class="mx-auto mt-3 text-xs text-gray-500">
+            Send Wahts app message to numbers without saving them just type the number and message click send .
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
