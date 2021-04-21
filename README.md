@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+# Send Whatsapp message without saving the phone number
 
-You can use the [editor on GitHub](https://github.com/bablubambal/SendWhatsappWithoutSavingNumber/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This website can send messages to the user of WhatsApp without saving the number of the person. This website is useful when we need to send a message to the person on WhatsApp and we don't want to save the number of the person than this is useful.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+You do not have to install anything to use this project this is simple a web page. You can directly use the website click on the link and fill the form to send the message.
 
-### Markdown
+## Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Click on the below link to use the project [SendWhatappMessage](https://bablubambal.github.io/SendWhatsappWithoutSavingNumber/)
 
-```markdown
-Syntax highlighted code block
+```
+Tools used:
+Html
+CSS
+Tailwind CSS
+JavaScript
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## How it Works
+It uses a simple WhatsApp api to send the message to other
+```
+Link: https://api.whatsapp.com/send/?phone=phonenumber&text=yourmessage
 
-### Jekyll Themes
+or other link
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bablubambal/SendWhatsappWithoutSavingNumber/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+link: http:/wa.me/{phonenumber}
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+We have made use of a simple function which loads the URL
+```
+encodeURI() // for encoding your text message in url format
+window.location.href = "" // to go to the link
+```
+## Main function of this project
+```
+ function sendWhatsapp(){
+
+                console.log("In the Function")
+                phoneNumber = document.getElementById('phone').value;
+                //String()
+                console.log(phoneNumber,typeof(phoneNumber))
+                message = document.getElementById('message').value;
+                
+                 message = encodeURI(message)
+                 console.log(message)
+
+                 url = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${message}`
+                 window.location.href = url
+
+
+
+
+            }
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
